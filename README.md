@@ -1,8 +1,10 @@
 # VitrineApp_R
 Grillo - Projeto Teste ASP .NET Core (paginação, busca, JSON)
+
 Tela de consulta desenvolvida no Microsoft Visual Studio 2019, utilizando o Framework ASP.NET Core + Bootstrap. 
-Fui utilizado também o Razor, com o intuito de realizar um CRUD, mas como as funcionalidadse solicitadas pars o teste era apenas para consulta e detalhamento num arquivo JSON online,
-a parte de inclusão, alteração e exclusão não foi realizada.
+O projeto foi criado como uma Web Application, sem utilizar o MVC.
+Foi utilizado também o Razor, com o intuito de realizar um CRUD, mas como as funcionalidadse solicitadas para o teste (consulta e detalhamento) a partir de um arquivo .JSON online, a parte de inclusão, da alteração e de exclusão não foi realizada por estar fora do escopo da solicitação inicial.
+
 A funcionalidade de consulta foi implementada com os seguintes filtros:
 - Campo de busca
 - Tipo de pesquisa (nome, marca, categoria, preço e tags)

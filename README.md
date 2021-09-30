@@ -13,6 +13,7 @@ A funcionalidade de consulta foi implementada com os seguintes filtros:
 - Tipo de ordenamento (nome, preço maior e preço menor)
 
 ** ATENÇÃO **
+
 Em andamento (buscando solução)
 - As pesquisas por categoria, preço e tags não estão funcionando, apesar da implementação do código não ser diferente da pesquisa por nome e marca.
 - O detalhamento não está funcionando.
@@ -20,4 +21,5 @@ Em andamento (buscando solução)
 
 
 ** UTILIZAÇÃO **
-Baixar / Clonar o repositório pelo Visual Studio pelo endereço
+
+Baixar / Clonar o repositório pelo Visual Studio pelo endereço https://github.com/ripostebr/VitrineApp_R. 

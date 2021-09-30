@@ -1,0 +1,78 @@
+﻿@page
+@model VitrineApp_R.Pages.Vitrine.IndexModel
+
+@{
+    ViewData["Title"] = "Novo Item";
+}
+
+<h1> ViewData["Title"]</h1>
+
+<p>
+    <a asp-page="Create">Criar Item</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].image_link)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].product_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].tag_list)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Item) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.image_link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.product_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tag_list)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

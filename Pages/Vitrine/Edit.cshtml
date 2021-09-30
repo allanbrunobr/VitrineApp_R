@@ -1,0 +1,70 @@
+﻿@page
+@model VitrineApp_R.Pages.Vitrine.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Item.id" />
+            <div class="form-group">
+                <label asp-for="Item.brand" class="control-label"></label>
+                <input asp-for="Item.brand" class="form-control" />
+                <span asp-validation-for="Item.brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.name" class="control-label"></label>
+                <input asp-for="Item.name" class="form-control" />
+                <span asp-validation-for="Item.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.price" class="control-label"></label>
+                <input asp-for="Item.price" class="form-control" />
+                <span asp-validation-for="Item.price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.image_link" class="control-label"></label>
+                <input asp-for="Item.image_link" class="form-control" />
+                <span asp-validation-for="Item.image_link" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.description" class="control-label"></label>
+                <input asp-for="Item.description" class="form-control" />
+                <span asp-validation-for="Item.description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.product_type" class="control-label"></label>
+                <input asp-for="Item.product_type" class="form-control" />
+                <span asp-validation-for="Item.product_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.category" class="control-label"></label>
+                <input asp-for="Item.category" class="form-control" />
+                <span asp-validation-for="Item.category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.tag_list" class="control-label"></label>
+                <input asp-for="Item.tag_list" class="form-control" />
+                <span asp-validation-for="Item.tag_list" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

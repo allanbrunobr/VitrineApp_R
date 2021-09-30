@@ -1,0 +1,70 @@
+﻿@page
+@model VitrineApp_R.Pages.Vitrine.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4><b>Item: </b> @Model.Item.id.ToString("D6") </h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.brand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.image_link)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.image_link)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.product_type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.product_type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.category)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.tag_list)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.tag_list)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Item.id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar aos Itens</a>
+    </form>
+</div>

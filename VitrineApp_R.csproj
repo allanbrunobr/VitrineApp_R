@@ -6,15 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Modelos\**" />
     <Compile Remove="Pages\NovaPasta1\**" />
     <Compile Remove="Pages\NovaPasta2\**" />
     <Compile Remove="Pages\NovaPasta\**" />
+    <Content Remove="Pages\Modelos\**" />
     <Content Remove="Pages\NovaPasta1\**" />
     <Content Remove="Pages\NovaPasta2\**" />
     <Content Remove="Pages\NovaPasta\**" />
+    <EmbeddedResource Remove="Pages\Modelos\**" />
     <EmbeddedResource Remove="Pages\NovaPasta1\**" />
     <EmbeddedResource Remove="Pages\NovaPasta2\**" />
     <EmbeddedResource Remove="Pages\NovaPasta\**" />
+    <None Remove="Pages\Modelos\**" />
     <None Remove="Pages\NovaPasta1\**" />
     <None Remove="Pages\NovaPasta2\**" />
     <None Remove="Pages\NovaPasta\**" />
@@ -28,10 +32,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\Modelos\" />
   </ItemGroup>
 
 </Project>

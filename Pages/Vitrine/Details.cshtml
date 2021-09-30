@@ -12,10 +12,10 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Item.brand)
+            @Html.DisplayNameFor(model => model.Item.image_link)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Item.brand)
+            <img class="card-img-top" src="@Html.DisplayFor(model => model.Item.image_link)" style="height:200px;width:200px;align-self:center;" />
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Item.name)
@@ -24,22 +24,16 @@
             @Html.DisplayFor(model => model.Item.name)
         </dd>
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item.brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.brand)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Item.price)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Item.price)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Item.image_link)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Item.image_link)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Item.description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Item.description)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Item.product_type)
@@ -48,12 +42,13 @@
             @Html.DisplayFor(model => model.Item.product_type)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Item.category)
+            @Html.DisplayNameFor(model => model.Item.description)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Item.category)
+            @Html.DisplayFor(model => model.Item.description)
         </dd>
-       
+
+
     </dl>
 </div>
 <div>

@@ -100,7 +100,7 @@
 
   @section Scripts {
     <script>
-
+        //função que procura na URL as variáveis que são usadas como parâmetros na busca
         function getUrlVars() {
             var vars = [], hash;
             var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -108,9 +108,11 @@
                 hash = hashes[i].split('=');
                 vars.push(hash[0]);
                 vars[hash[0]] = hash[1];
+
             }
             return vars;
         }
+        // ação realizada para manter selecionado na página da consulta o que foi digitado e a ordenação
         $(document).ready(function () {
             var qs = getUrlVars();
             if (qs["o"] != null) {
@@ -128,15 +130,15 @@
         });
 
 
-
+        //se houver alteração no select de ordenção, efetuar o envio do formulário para ser tratado no controle (OnGet(), Index.cshtml.cs)
         $("#ordem").change(function () {
             $("#ordem").val($("#ordem").val());
             $("#formBusca").submit();
         });
-
+        //se número na paginação for clicado, submeter o formulário para tratamento no controle
         $(".page-link").click(function () {
             //o elemento cujo id é p
-            $("#p").val($(this).val());//(this).val() pega o valor do elemento clicado
+            $("#p").val($(this).val());//(this).val() pega o valor do elemento clicado (OnGet(), Index.cshtml.cs)
             $("#formBusca").submit();
         });
 

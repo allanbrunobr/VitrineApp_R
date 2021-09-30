@@ -21,6 +21,7 @@ namespace ConsoleApp2.Serialization
         public string price { get; set; }
         public string image_link { get; set; }
 
+        [DisplayName("Descrição")]
         public string description { get; set; }
         public string product_type { get; set; }
         

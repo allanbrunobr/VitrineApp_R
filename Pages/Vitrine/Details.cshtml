@@ -2,7 +2,7 @@
 @model VitrineApp_R.Pages.Vitrine.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhe do Item";
 }
 
 <h1>Details</h1>
@@ -53,15 +53,9 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Item.category)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Item.tag_list)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Item.tag_list)
-        </dd>
+       
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Item.id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Voltar</a>
 </div>

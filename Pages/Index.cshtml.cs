@@ -62,19 +62,21 @@ namespace VitrineApp_R.Pages
                         case 0:
                             for (int i = 0; i < itens.Count; i++)
                             {
-                                //se todos os itens de busca forem nulos -> remover da lista
+                                //se o campo name no item for nulo, remover da lista
                                 if (itens[i].name == null)
                                 {
                                     itens.Remove(itens[i]);
                                 }
                             }
+                            //caso o usuário digite minúsculas, o sistema converte para letras maiusculas tanto a pesquisa, como o resultado
+                            //pois é case sensitive
                             query = query.Where(p => p.name.ToUpper().Contains(termoBusca.ToUpper()));
 
                             break;
                         case 1:
                             for (int i = 0; i < itens.Count; i++)
                             {
-                                //se todos os itens de busca forem nulos -> remover da lista
+                               
                                 if (itens[i].brand == null)
                                 {
                                     itens.Remove(itens[i]);
@@ -88,7 +90,7 @@ namespace VitrineApp_R.Pages
                             for (int i = 0; i < itens.Count; i++)
                             {
                                 //se todos os itens de busca forem nulos -> remover da lista
-                                if (itens[i].category == null)
+                                if (itens[i].category == null || itens[i].category == "")
                                 {
                                     itens.Remove(itens[i]);
                                 }
@@ -100,7 +102,7 @@ namespace VitrineApp_R.Pages
                         case 3:
                             for (int i = 0; i < itens.Count; i++)
                             {                               
-                                if (itens[i].price == null) {
+                                if (itens[i].price == null || itens[i].price == "") {
                                     itens.Remove(itens[i]);
                                 }
                             }
@@ -126,7 +128,7 @@ namespace VitrineApp_R.Pages
                
 
             }//
-
+            //se o campo para ordenação foi selecionado
             if (o.HasValue)
             {
                 switch (o.Value)
@@ -148,6 +150,12 @@ namespace VitrineApp_R.Pages
                         break;
                 }
             }
+            /*
+             
+             PAGINAÇÃO
+             
+             */
+
             //criação de outra query para ñão interferir na query da consulta
             var queryCount = query;
             //quantidade de registros que irá servir para o número de páginas paginadas
